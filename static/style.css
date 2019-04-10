@@ -17,6 +17,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -187,17 +188,34 @@ ol {
 	padding: 17px 25px;
 	border-radius: 30px;
 	font-weight:bold;
-	background: #35158c;
+	background: #00a3ab;
 	color: #fff;
 	line-height: 1;
 	cursor: pointer;
 	text-align: center;
+	text-decoration: none;
+	transition: 0.3s ease all;
 }
+
 .site-btn.ghost {
 	border: 1px solid #fff;
+	text-decoration: none;
+	background:transparent;
 }
+
+.site-btn.grey {
+	background: #001E47;
+	opacity: 0.5;
+	text-decoration: none;
+}
+.site-btn.grey:hover {
+	background: #001E47;
+	cursor: initial;
+}
+
 .site-btn:hover {
 	color: #fff;
+	background: #03cad4;
 }
 
 .site-btn.sb-line {
@@ -766,18 +784,22 @@ ol {
 .domain-search-form {
 	margin-bottom: 15px;
 }
-
+.domain-search-form textarea,
 .domain-search-form input {
 	width: 100%;
 	height: 42px;
 	font-size: 18px;
 	border: none;
-	background: #ffd4d4;
+	background: #ddf6f1;
 	border-radius: 8px;
 	display: block;
 	padding: 0 10px;
 	color: #333;
 }
+.domain-search-form textarea {
+	height:auto;
+}
+
 
 .domain-search-form input[type="checkbox"] {
 	margin-right: 10px;
@@ -1790,7 +1812,7 @@ ol {
 
 .exo-footer {
 	padding: 50px 0;
-	background: #5c0c68;
+	background: #001E47;
 	text-align: center;
 }
 	.exo-footer .footer-widget li {

@@ -1,8 +1,7 @@
 {
-  "name": "website-exoleaders",
+  "name": "website-exosummits",
   "alias": [
-    "exoleader.now.sh",
-    "exoleaders.now.sh"
+    "exosummits.now.sh"
   ],
   "github": {
     "enabled": true,

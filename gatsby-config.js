@@ -2,7 +2,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'ExO Leaders | Exponential leaders of tomorrow',
+    title: 'ExO Summits | Inspire, educate and support leaders for a the world for a better future.',
     siteUrl: '',
     description: '',
     author: {

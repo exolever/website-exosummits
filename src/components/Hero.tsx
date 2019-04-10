@@ -28,7 +28,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
       <div className="container h-100">
         <div className="hero-content text-white">
           <div className="row">
-            <div className="col-lg-6 pr-0">
+            <div className="col-lg-6 offset-md-3 pr-0 text-center">
               <Logo src="/social/logo.svg" alt="exo leaders"/>
               <p>{subtitle}</p>
               <a href={cta.target} className="site-btn ghost">{cta.text}</a>

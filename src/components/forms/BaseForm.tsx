@@ -17,7 +17,9 @@ interface Labels {
   location: string;
   linkedIn: string;
   groups: string;
+  dates: string;
   button: string;
+  description:string;
 }
 
 interface Messages {
@@ -37,6 +39,8 @@ interface Props {
   enableName?: boolean;
   enableLocation?: boolean;
   enableLinkedIn?: boolean;
+  enableDates?: boolean;
+  enableDescription?: boolean;
   enableGroups?: Group[];
   groupTitle?: any;
 }
@@ -86,7 +90,7 @@ class BaseForm extends React.Component<Props, State> {
   }
 
   render() {
-    const { labels, enableName, enableLocation, enableLinkedIn, enableGroups, groupTitle } = this.props;
+    const { labels, enableName, enableLocation, enableLinkedIn, enableDates, enableDescription, enableGroups, groupTitle } = this.props;
     const visibleGroups = enableGroups ? enableGroups.filter(group => !group.hidden): [];
     const hiddenGroups = enableGroups ? enableGroups.filter(group => group.hidden): [];
 
@@ -110,20 +114,32 @@ class BaseForm extends React.Component<Props, State> {
             onSubmit={this.onSubmit}
           >
             <div className="mc_embed_signup_scroll">
+            <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
+
+            {enableName &&
+                <div className="mc-field-group">
+                  <label htmlFor={`mce-NAME-${this.id}`}>{labels.name}&nbsp;<span className="asterisk">*</span></label>
+                  <input type="text" defaultValue="" name="NAME" id={`mce-NAME-${this.id}`} />
+                </div>}
               <div className="mc-field-group">
-                <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
                 <label htmlFor={`mce-EMAIL-${this.id}`}>{labels.email}&nbsp;<span className="asterisk">*</span></label>
                 <input type="email" defaultValue="" name="EMAIL" id={`mce-EMAIL-${this.id}`} required />
               </div>
-              {enableName &&
+
+              {enableDates &&
                 <div className="mc-field-group">
-                  <label htmlFor={`mce-NAME-${this.id}`}>{labels.name}</label>
-                  <input type="text" defaultValue="" name="NAME" id={`mce-NAME-${this.id}`} />
+                  <label htmlFor={`mce-DATES-${this.id}`}>{labels.dates}&nbsp;<span className="asterisk">*</span></label>
+                  <input type="text" defaultValue="" name="DATES" id={`mce-DATES-${this.id}`} />
                 </div>}
               {enableLocation &&
                 <div className="mc-field-group">
-                  <label htmlFor={`mce-LOCATION-${this.id}`}>{labels.location}</label>
+                  <label htmlFor={`mce-LOCATION-${this.id}`}>{labels.location}&nbsp;<span className="asterisk">*</span></label>
                   <input type="text" defaultValue="" name="LOCATION" id={`mce-LOCATION-${this.id}`} />
+                </div>}
+              {enableDescription &&
+                <div className="mc-field-group">
+                  <label htmlFor={`mce-DESCRIPTION-${this.id}`}>{labels.description}&nbsp;<span className="asterisk">*</span></label>
+                  <textarea defaultValue="" name="DESCRIPTION" id={`mce-DESCRIPTION-${this.id}`} ></textarea>
                 </div>}
               {enableLinkedIn &&
                 <div className="mc-field-group">
