@@ -12,7 +12,7 @@ interface Props {
 const HighlightSection: React.SFC<Props> = ({ title, tagline, icon, backgroundImage, children }) => {
 
   const BackgroundImage = styled.section`
-    background: url(${backgroundImage});
+    background-image: url(${backgroundImage});
   `;
 
   return (

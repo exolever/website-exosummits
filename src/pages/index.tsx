@@ -11,8 +11,8 @@ import LeaderForm from '../components/forms/LeaderForm';
 import About from '../components/About';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
-import * as sectionBg from '../img/bg-summit.png';
-import * as sectionBgAlt from '../img/bg-mountain.png';
+import * as sectionBg from '../img/bg-summit.jpg';
+import * as sectionBgAlt from '../img/bg-mountain.jpg';
 
 import * as dubai from '../img/dubai.png';
 import * as mexico from '../img/mexico.png';
@@ -37,7 +37,7 @@ const DATA = {
           title: 'Dubai, April 18-20',
           description: () => '',
           image:dubai,
-          url: `www.openexodubai.com`
+          url: `http://www.openexodubai.com`
         },
         {
           title: 'NYC, July 19-20-21',
@@ -67,7 +67,7 @@ const DATA = {
       },
       fields: {
         groups: [
-          { id: 2, hidden: true },
+          { id: 8192, hidden: true },
         ],
         groupTitle: 'I want to know about:',
       },
@@ -97,7 +97,7 @@ class IndexPage extends React.Component<any, State> {
       <IndexLayout>
         <Page>
           <Hero
-            title="ExO Leaders"
+            title="ExO Summit"
             subtitle={DATA.en.hero.description}
             backgroundImage={sectionBg}
             cta={{ text: DATA.en.hero.btnLabel, target: '#community' }}
@@ -112,10 +112,6 @@ class IndexPage extends React.Component<any, State> {
             fields={DATA.en.form.fields}
             messages={DATA.en.form.messages}
           />
-
-
-
-
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>

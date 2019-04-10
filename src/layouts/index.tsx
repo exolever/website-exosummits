@@ -14,17 +14,18 @@ type StaticQueryProps = {
     };
   };
 };
+
 const meta = [
-  { name: 'description', content: "Exponential leaders of tomorrow, transforming bussiness to survive a rapidly changing world" },
+  { name: 'description', content: "ExO Summits | Inspire, educate and support leaders of the world for a better future." },
   { name: 'keywords', content: 'Exponential, bussiness, transform, change, rapid, tech' },
   { name: "viewport", content:"width=device-width, initial-scale=1.0"},
-  { name: "apple-mobile-web-app-title", content: "exoleaders"},
+  { name: "apple-mobile-web-app-title", content: "exosummits"},
   { name: "google-site-verification", content: ""},
-  { name: "theme-color", content: "#3c1597"},
-  { name: "msapplication-TileColor", content: "#3c1597"},
+  { name: "theme-color", content: "#001E47"},
+  { name: "msapplication-TileColor", content: "#001E47"},
   { property: "og:description", content: ""},
   { property: "og:image", content: "/social/banner.png"},
-  { property: "og:title", content: "ExO Leaders | Exponential leaders of tomorrow"}
+  { property: "og:title", content: "ExO Summits | Inspire, educate and support leaders of the world for a better future."}
 ]
 
 

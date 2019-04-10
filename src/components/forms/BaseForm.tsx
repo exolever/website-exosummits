@@ -138,29 +138,15 @@ class BaseForm extends React.Component<Props, State> {
                 </div>}
               {enableDescription &&
                 <div className="mc-field-group">
-                  <label htmlFor={`mce-DESCRIPTION-${this.id}`}>{labels.description}&nbsp;<span className="asterisk">*</span></label>
-                  <textarea defaultValue="" name="DESCRIPTION" id={`mce-DESCRIPTION-${this.id}`} ></textarea>
+                  <label htmlFor={`mce-MESSAGE-${this.id}`}>{labels.description}&nbsp;<span className="asterisk">*</span></label>
+                  <textarea defaultValue="" name="MESSAGE" id={`mce-MESSAGE-${this.id}`} ></textarea>
                 </div>}
               {enableLinkedIn &&
                 <div className="mc-field-group">
                   <label htmlFor={`mce-LINKEDIN-${this.id}`}>{labels.linkedIn}</label>
                   <input type="text" defaultValue="" name="LINKEDIN" id={`mce-LINKEDIN-${this.id}`} />
                 </div>}
-              {visibleGroups.length > 0 &&
-                <div className="mc-field-group">
-                  {groupTitle && <div><label>{groupTitle}</label></div>}
-                  <div className="input-group">
-                    {visibleGroups.map(group =>
-                      <Checkbox
-                        key={group.id}
-                        id={`mce-group[189][${group.id}]-${this.id}`}
-                        name={`group[189][${group.id}]`}
-                        value={group.id}
-                        label={group.label}
-                      />
-                    )}
-                  </div>
-                </div>}
+
               {this.state.message &&
                 <div className="mce-responses clear" dangerouslySetInnerHTML={{ __html: this.state.message }} />}
               <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">

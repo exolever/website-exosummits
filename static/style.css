@@ -135,6 +135,7 @@ ol {
 }
 .hero-section.set-bg {
 	background-position: bottom center;
+	background-size:cover;
 }
 .spad {
 	padding-top: 105px;
@@ -798,6 +799,7 @@ ol {
 }
 .domain-search-form textarea {
 	height:auto;
+	padding-top: 10px;
 }
 
 
@@ -1593,6 +1595,7 @@ ol {
 	}
 	.set-bg {
 		background-attachment: unset;
+		background-size:cover;
 	}
 }
 
@@ -1844,4 +1847,10 @@ a {
 }
 a:hover {
 	color: #b311c8;
+}
+
+.logo-center {
+	margin:0 auto;
+	flex: 0 0 50%;
+  max-width: 50%;
 }

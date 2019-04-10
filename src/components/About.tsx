@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Link = (url) => {
-  console.log(url);
   if(url !== false) {
     return <a target="_blank" className="site-btn text-white" href={url}>Learn More</a>
   } else {
