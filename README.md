@@ -1,0 +1,5 @@
+# Website Exolaunchpad
+
+```
+npm install
+```
