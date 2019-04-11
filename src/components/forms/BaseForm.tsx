@@ -4,10 +4,8 @@ import jsonp from 'jsonp';
 import styled from '@emotion/styled';
 import Checkbox from './Checkbox';
 
-const MC = {
-  endpoint: 'https://exodevhub.us20.list-manage.com/subscribe/post-json',
-  user: 'ccfff1ccf7951d4ec0af22cac',
-  id: '8ca8438865'
+const Form = {
+  endpoint: 'https://usebasin.com/f/02412db358de'
 };
 
 interface Labels {
@@ -50,7 +48,7 @@ interface State {
   message: string;
 }
 
-const getUrl = (params: string) => `${MC.endpoint}?${params}`;
+const getUrl = (params: string) => `https://usebasin.com/f/02412db358de`;
 
 const getId = (() => {
   let id = 0;
@@ -59,6 +57,12 @@ const getId = (() => {
     return id;
   };
 })();
+
+const thankYou = () => {
+  if(window.location.search.indexOf('?thankyou') > -1) {
+    return 'show-thank-you'
+  }
+}
 
 const getMsg = (msg: string) => /^\d \-/.test(msg) ? msg.split('-')[1] : msg;
 
@@ -91,8 +95,6 @@ class BaseForm extends React.Component<Props, State> {
 
   render() {
     const { labels, enableName, enableLocation, enableLinkedIn, enableDates, enableDescription, enableGroups, groupTitle } = this.props;
-    const visibleGroups = enableGroups ? enableGroups.filter(group => !group.hidden): [];
-    const hiddenGroups = enableGroups ? enableGroups.filter(group => group.hidden): [];
 
     if (this.state.complete) {
       return (
@@ -104,14 +106,17 @@ class BaseForm extends React.Component<Props, State> {
       )
     }
     return (
-      <div className="domain-form-warp">
+      <div className={`domain-form-warp ${thankYou()}`}>
+        <div className="thank-you-message">
+              <div>Thanks for sending your summit info!</div>
+            </div>
         <div className="mc_embed_signup">
           <form
             className="mc-embedded-subscribe-form domain-search-form validate"
             method="post"
             name="mc-embedded-subscribe-form"
             target="_blank"
-            onSubmit={this.onSubmit}
+            action={`${Form.endpoint}`}
           >
             <div className="mc_embed_signup_scroll">
             <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
@@ -147,15 +152,8 @@ class BaseForm extends React.Component<Props, State> {
                   <input type="text" defaultValue="" name="LINKEDIN" id={`mce-LINKEDIN-${this.id}`} />
                 </div>}
 
-              {this.state.message &&
-                <div className="mce-responses clear" dangerouslySetInnerHTML={{ __html: this.state.message }} />}
-              <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                {hiddenGroups.map(group =>
-                  <input key={group.id} type="hidden" value={group.id} name={`group[189][${group.id}]`} readOnly />)}
-                <input type="text" name={`b_${MC.user}_${MC.id}`} value="" readOnly />
-                <input type="hidden" name="u" value={MC.user} readOnly />
-                <input type="hidden" name="id" value={MC.id} readOnly />
-              </div>
+              {this.state.message && <div className="mce-responses clear" dangerouslySetInnerHTML={{ __html: this.state.message }} />}
+
               <div className="clear">
                 <button type="submit" name="subscribe" className="mc-embedded-subscribe site-btn sb-line">{labels.button}</button>
               </div>

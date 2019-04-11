@@ -1854,3 +1854,17 @@ a:hover {
 	flex: 0 0 50%;
   max-width: 50%;
 }
+
+.thank-you-message {
+	display:none;
+}
+.domain-form-warp.show-thank-you > * {
+	display:none;
+}
+.domain-form-warp.show-thank-you .thank-you-message *,
+.domain-form-warp.show-thank-you .thank-you-message {
+	display: block;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
