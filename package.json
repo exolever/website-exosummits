@@ -10,6 +10,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "clean": "rimraf public",
     "deploy": "gatsby build; cd public; now --name website-exoleaders",
     "dev": "gatsby develop",

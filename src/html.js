@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { hotjar } from 'react-hotjar';
 
+
 export default class HTML extends React.Component {
   render() {
     return (
@@ -21,7 +22,6 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
@@ -32,6 +32,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script src="/thank-you.js"></script>
         </body>
       </html>
     )

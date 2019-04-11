@@ -58,8 +58,12 @@ const getId = (() => {
   };
 })();
 
+const getWindowSearch = () => {
+ return typeof window !== 'undefined' ? window.location.search : '';
+}
+
 const thankYou = () => {
-  if(window.location.search.indexOf('?thankyou') > -1) {
+  if(getWindowSearch().indexOf('?thankyou') > -1) {
     return 'show-thank-you'
   }
 }
@@ -106,10 +110,10 @@ class BaseForm extends React.Component<Props, State> {
       )
     }
     return (
-      <div className={`domain-form-warp ${thankYou()}`}>
+      <div id="basin-form" className={`domain-form-warp ${thankYou()}`}>
         <div className="thank-you-message">
-              <div>Thanks for sending your summit info!</div>
-            </div>
+          <div>Thanks for sending your summit info!</div>
+        </div>
         <div className="mc_embed_signup">
           <form
             className="mc-embedded-subscribe-form domain-search-form validate"
