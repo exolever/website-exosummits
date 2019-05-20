@@ -4,10 +4,8 @@ import * as React from 'react';
 import Page from '../components/Page';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
-import Section from '../components/Section';
-import HighlightSection from '../components/HighlightSection';
 import IndexLayout from '../layouts';
-import LeaderForm from '../components/forms/LeaderForm';
+import HubSpotForm from '../components/forms/HubSpotForm';
 import About from '../components/About';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
@@ -104,13 +102,9 @@ class IndexPage extends React.Component<any, State> {
           />
 
         <About content={DATA.en.about.features.slice(0, 3)} />
-
-          <LeaderForm
+          <HubSpotForm
             formBg={sectionBgAlt}
             title={DATA.en.form.title()}
-            labels={DATA.en.form.labels}
-            fields={DATA.en.form.fields}
-            messages={DATA.en.form.messages}
           />
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
