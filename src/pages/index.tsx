@@ -75,7 +75,7 @@ const DATA = {
       }
     },
     footer: {
-      main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
+      main: { text: 'OpenExO', url: 'https://www.openexo.com/' },
       links: [
         { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
         { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
