@@ -73,6 +73,10 @@ ul.no-list.hs-error-msgs.inputs-list {
   font-style: italic;
 }
 
+.hs-richtext p { color: white !important; }
+div#my-form p {
+  color: white;
+}
 .submitted-message p {
   color: #fff;
     line-height: 2;

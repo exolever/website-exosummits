@@ -38,7 +38,7 @@ const DATA = {
           url: `http://www.openexodubai.com`
         },
         {
-          title: 'NYC, July 19-20-21',
+          title: 'NYC, July 20',
           description: () => '',
           image: nyc,
           url: `http://novussummit.org`
