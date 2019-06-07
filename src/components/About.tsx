@@ -46,7 +46,7 @@ const Horizontal = ({ title, description, image }) =>
 const About: React.SFC<Props> = ({ content }) => {
   const column = Math.floor(12 / content.length);
   return (
-    <Section className="spad about-section">
+    <Section>
      <div className="text-center">
         <h2>Upcoming Summits</h2>
       </div>

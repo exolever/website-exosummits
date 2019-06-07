@@ -22,7 +22,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+          <script charSet="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
