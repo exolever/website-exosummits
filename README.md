@@ -2,7 +2,7 @@
 
 [https://summits.openexo.com/](https://summits.openexo.com/)
 
-```
+
 ## Install Dependencies
 1. Install Node.js (v.10.0.0 upwards)
 
