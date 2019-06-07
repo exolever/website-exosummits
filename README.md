@@ -20,12 +20,8 @@ npm run start
 ```
 
 ## Build & Deployment
-1. Build `staging` version of application to `dist` directory
-```
-npm run build:stg
-```
 
-2. Build `production` version of application to `dist` directory
+1. Build `production` version of application to `dist` directory
 ```
 npm run build
 ```
