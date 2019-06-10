@@ -23,6 +23,16 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
     background-position: top center;
   `;
 
+  // TODO: Quickfix until we find out what is really going on.
+  function onClickNavigateToContactForm(target) {
+    const element = document.querySelector(target);
+    const topPos = element.getBoundingClientRect().top
+    window.scroll({
+      top: topPos,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <ContainerWithBackgroundImage className="hero-section set-bg">
       <div className="container h-100">
@@ -31,7 +41,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
             <div className="logo-center text-center">
               <Logo src="/social/logo.svg" alt="exo summit"/>
               <p>{subtitle}</p>
-              <a href={cta.target} className="site-btn ghost">{cta.text}</a>
+              <div onClick={() => onClickNavigateToContactForm(cta.target)} className="site-btn ghost">{cta.text}</div>
             </div>
           </div>
           {
