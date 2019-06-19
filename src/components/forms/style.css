@@ -16,6 +16,11 @@ form label {
   color: #fff !important;
 }
 
+.hs-form select:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Inputs (selectors for all inputs)  */
 .hs-form input[type="text"],
 .hs-form input[type="password"],

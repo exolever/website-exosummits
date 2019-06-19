@@ -30,6 +30,7 @@
     "babel-plugin-styled-components": "^1.7.1",
     "classnames": "^2.2.6",
     "country-region-selector": "^0.5.1",
+    "country-state-city": "^1.0.0",
     "form-serialize": "^0.7.2",
     "gatsby": "^2.0.85",
     "gatsby-cli": "^2.5.6",
