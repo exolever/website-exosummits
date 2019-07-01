@@ -47,7 +47,7 @@ const DATA = {
           title: 'Mexico, September 12',
           description: () => '',
           image: mexico,
-          url: false
+          url: 'https://es.growthinstitute.com/summit-scalexo/'
         }
       ]
     },

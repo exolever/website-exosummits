@@ -34,7 +34,7 @@ export default class HubSpot extends React.Component<Props, any> {
   componentDidMount() {
     window['hbspt'].forms.create({
       portalId: "5510631",
-	    formId: "114a380e-b66c-425d-8ef7-d88714cd3142",
+	    formId: 'c2b2e135-afd6-4a5e-8e1b-43349fd4434c',
       target: '#my-form',
     });
     const countries = csc.getAllCountries();
@@ -52,7 +52,7 @@ export default class HubSpot extends React.Component<Props, any> {
         countrySelect.addEventListener('change', (event) => {
           const value = event.target.value;
           const countryId = value.substring(value.indexOf('(') + 1, value.length-1).trim();
-          debugger
+
           const regions = csc.getStatesOfCountry(countryId);
           const regionOptions = regions.map(this.objToHTML).join('');
           regionSelect.innerHTML = this.prependPlaceholder(regionOptions, 'region');
@@ -64,10 +64,8 @@ export default class HubSpot extends React.Component<Props, any> {
             const cityOptions = cities.map(this.objToHTML).join('');
             citySelect.innerHTML = this.prependPlaceholder(cityOptions, 'city');
             if (cities.length < 1) {
-              console.log('dame')
               citySelect.setAttribute('disabled', true);
             } else {
-              console.log('ok')
               citySelect.removeAttribute('disabled');
             }
           });
