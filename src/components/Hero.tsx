@@ -39,7 +39,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
         <div className="hero-content text-white">
           <div className="row">
             <div className="logo-center text-center">
-              <Logo src="/social/logo.svg" alt="exo summit"/>
+              <Logo src="social/logo.svg" alt="exo summit"/>
               <p>{subtitle}</p>
               <div onClick={() => onClickNavigateToContactForm(cta.target)} className="site-btn ghost">{cta.text}</div>
             </div>

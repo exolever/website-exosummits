@@ -24,7 +24,7 @@ const meta = [
   { name: "theme-color", content: "#001E47"},
   { name: "msapplication-TileColor", content: "#001E47"},
   { property: "og:description", content: ""},
-  { property: "og:image", content: "/social/banner.png"},
+  { property: "og:image", content: "social/banner.png"},
   { property: "og:title", content: "ExO Summits | Inspire, educate and support leaders of the world for a better future."}
 ]
 
