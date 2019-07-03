@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+  pathPrefix: `/website-exosummits`,
   siteMetadata: {
     title: 'ExO Summits | Inspire, educate and support leaders for a the world for a better future.',
     siteUrl: '',
@@ -41,7 +42,7 @@ module.exports = {
         exclude: ["/preview/**", "/do-not-track/me/too/"],
         // Set Variation ID. 0 for original 1,2,3....
         variationId: "0",
-        cookieDomain: "exoleaders.com",
+        cookieDomain: "summits.openexo.com",
       },
     },
     {
@@ -83,7 +84,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'http://exodevhub.com'
+        siteUrl: 'https://www.openexo.com'
       }
     },
     'gatsby-plugin-emotion',

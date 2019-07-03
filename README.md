@@ -1,4 +1,4 @@
-# ExO Summits
+# ExO Summits [![Build Status](https://travis-ci.org/exolever/website-exosummits.svg?branch=master)](https://travis-ci.org/exolever/website-exosummits)
 
 [https://summits.openexo.com/](https://summits.openexo.com/)
 
