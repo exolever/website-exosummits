@@ -1,7 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { hotjar } from 'react-hotjar';
-
 
 export default class HTML extends React.Component {
   render() {

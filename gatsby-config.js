@@ -22,13 +22,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        id: 1175385,
-        sv: 6
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-135475643-6",
