@@ -7508,8 +7508,8 @@ msgpackr@^1.5.4:
     msgpackr-extract "^3.0.2"
 
 multer@^2.0.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/multer/-/multer-2.2.0.tgz#f005268ca816324ba7335e3b48166896a3fa5d79"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/multer/-/multer-2.3.0.tgz#46f5a98c34e09661ff089fa49ae487846bd5b4fd"
   dependencies:
     append-field "^1.0.0"
     busboy "^1.6.0"
